@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="icon" href="favicon.ico" type="image/x-icon" />
+		<link rel="stylesheet" href="css/style.css">
+		<script>
+			function getUrlVar() {
+				var result = {};
+				var location = window.location.href.split('#');
+				var parts = location[0].replace(/[?&]+([^=&]+)=([^&]*)/gi, function(m,key,value) { result [key] = value; });
+				return result;	}
+			var c = getUrlVar()["c"];
+			var q = getUrlVar()["q"];
+			var id = getUrlVar()["id"];
+			var page = getUrlVar()["page"];
+			var ttl = 'NONTON FILM ONLINE';
+			if( c ){var q = getUrlVar()["c"];}
+			else if( q ){var q = getUrlVar()["q"];}
+			else{var q = ttl;}
+			var titel = q.replace(/\/|_/g, " ");
+			document.write('<title>'+decodeURIComponent(titel.toUpperCase())+' | BIOSKOPKU.WAP.SH</title>');
+		</script>
+		<script src="js/lazysizes.min.js" async=""></script>
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+		<script type='text/javascript' src='https://platform-api.sharethis.com/js/sharethis.js#property=62d10af8ebc31f0019d5bdd8&product=inline-share-buttons' async='async'></script>
+	</head>
+	<body>
+<div class="header">
+	<div class="slideshow-container">
+		<div id="mLogo"></div>
+	</div>
+	<div class="bottom-center">
+	<span class="dot"></span> 
+	<span class="dot active"></span> 
+	<span class="dot"></span> 
+	<span class="dot"></span> 
+	<span class="dot"></span> 
+	<span class="dot"></span> 
+	<span class="dot"></span> 
+</div>
+<div class="top-right">
+	<div class="sharethis-inline-share-buttons"></div>
+</div>
+</div>
+<div class="header">
+<div class="sub-navigation" style="padding:30px">
+	<div class="top-left">
+		<a style="color:red" href="/">MOVIE</a> 
+		<a href="http://anime.bioskopku.wap.sh">ANIME</a> 
+		<a href="http://drama.bioskopku.wap.sh">DRAMA</a> 
+		<a href="http://series.bioskopku.wap.sh">SERIES</a>
+		<a href="gb">CHAT</a>
+	</div>
+	<div class="top-right">
+		<form class="search" action="search.html?">
+			<input type="text" placeholder="Search.." name="q">
+			<button style="margin-bottom:2px;" type="submit">
+				<i class="fa fa-search"></i>
+			</button>
+			<div>Temukan Film Favoritmu</div>
+		</form>
+	</div>
+</div>
+</div>
+<script src="js/myKeys.js"></script>
+<!---->
+<div class="row">
+	<div class="column middle">
+		<div id="movie"></div>
+	</div>
+	<div class="column side">
+		<h4>Select Genre</h4>
+		<div id="mGenre"></div>
+		<h4>Select Year</h4>
+		<div id="mYear"></div>
+		<h4>Select Country</h4>
+		<div id="mCountry"></div>
+		<a target="_blank" href="http://xroom.yn.lt">
+			<img style="width:100%;margin-top:14px;" src="images/ads.png">
+		</a>
+	</div>
+</div>
+<script src="js/toprated.js"></script>
+<!---->
+<button onclick="topFunction()" id="myBtn" title="UP">
+	<i class="fa fa-chevron-up"></i>
+</button>
+<script src="js/getgenre.js"></script>
+<script src="js/city.js"></script>
+<script src="js/slider.js"></script>
+<script>
+	var mYear = "";
+	for (let i = 1945; i < 2023; i++) { mYear +='<a href="year.html?q='+i+'">'+i+'</a> '; }
+	document.getElementById("mYear").innerHTML = mYear;
+</script>
+<div class="footer" style="padding:6px;">
+	<h3>
+	Nonton film online sub Indo dari berbagai negara Asia, semuanya bisa di BIOSKOPKU.WAP.SH. Mulai dari streaming film Indonesia, Mandarin, Thailand, sampai film Korea terbaru, lengkap dengan subtitle Indonesia!   BIOSKOPKU.WAP.SH adalah destinasi terlengkap untuk nonton film streaming Asia. Nonton streaming film dari berbagai genre seperti film romantis yang bikin baper, horror dan thriller yang menegangkan, action yang memacu adrenalin, hingga film komedi yang lucu dan bikin ngakak, seperti Hangout yang dibintangi dan disutradarai Raditya Dika atau film Warkop DKI yang legendaris, seperti Dongkrak Antik dan Maju Kena Mundur Kena.  Jangan lewatkan nonton film Indonesia terbaru seperti Habibie dan Ainun 3 yang dibintangi Reza Rahardian dan Maudy Ayunda, film Indonesia terpopuler seperti Dua Garis Biru, atau film Indonesia terbaik seperti Pengabdi Setan yang disutradarai Joko Anwar. Selain itu, ada juga film Korea terbaik pemenang banyak penghargaan, Parasite, Ashfall, dan Train to Busan,   Nikmati pengalaman nonton movie online sub Indo dengan kualitas HD di BIOSKOPKU.WAP.SH, seperti layaknya nonton film bioskop online dengan menyambungkan smartphone kamu ke televisi atau download film favorit kamu untuk ditonton offline.
+	</h3>
+</div>
+	</body>
+</html>
