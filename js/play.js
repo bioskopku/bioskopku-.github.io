@@ -25,7 +25,7 @@ function getDataRender() {
 		var plot = data.overview
 		var embed = data.imdb_id
 		if (embed == null){ var kosong = '<h1>MAAF VIDEO '+q+' TELAH DIHAPUS</h1>'; }else{ var kosong = ''; }
-		rendered += '<div class="embed"><div class="iframe-container"><iframe class="lazyload" data-src="https://databasegdriveplayer.xyz/player.php?imdb='+embed+'"></iframe></div></div>';
+		rendered += '<div class="embed"><div class="iframe-container"><iframe class="lazyload" data-src="https://api.123movie.cc/imdb.php?imdb='+embed+'&server=hydrax"></iframe></div></div>';
 		rendered += '<div class="movietitle"><div class="poster"><img src="https://image.tmdb.org/t/p/w500/'+poster+'" alt="'+title+'"></div><div class="description"><h4>'+title+'</h4><div id="genres"></div><div id="product"></div><b>Released :</b> '+date+'<br><b>Popular :</b> '+popular+'<br><b>Vote :</b> '+vote+'<br><b>Plot :</b> '+tags+'<br>'+plot+'<div id="thriler"></div></div></div>';
 		rendered += kosong;
 		document.getElementById("embed").innerHTML = rendered
